@@ -12,6 +12,18 @@
   </head>
 
   <body>
+  <header class="navbar navbar-fixed-top">
+    <div class="container">
+      <%= link_to "静かな家に住もう", root_path, id: "logo" %>
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "ホーム",   root_path %></li>
+          <li><%= link_to "新規登録", signup_path %></li>
+          <li><%= link_to "ログイン", login_path %></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <div class="container">
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
