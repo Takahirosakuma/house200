@@ -1,5 +1,25 @@
+<% provide(:title, "アカウント編集") %>
+
 <h1>アカウント編集</h1>
-<p>ニックネーム</p>
-<p>メールアドレス</p>
-<p>パスワード</p>
-<p>パスワード確認</p>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(model: @user) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :name, "ニックネーム"  %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :email, "メールアドレス"  %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :password, "パスワード"  %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "パスワード確認" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.submit "変更して保存", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
