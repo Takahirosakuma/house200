@@ -10,6 +10,16 @@
   <p>パスワード確認</p>
     <%= @user.password_digest %>
   </div>
+  <div>
     <%= link_to "アカウント削除", @user, data: { "turbo-method": :delete, turbo_confirm: "本当に削除しますか？" } %>
-
+  </div>
+  <div class="col-md-8">
+    <% if @user.posts.any? %>
+      <h3>投稿 (<%= @user.posts.count %>)</h3>
+      <ol class="posts">
+        <%= render @posts %>
+      </ol>
+      <%= will_paginate @posts %>
+    <% end %>
+  </div>
 </div>
