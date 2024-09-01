@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :logged_in_user, only: [:new, :create, :destroy]
+  before_action :logged_in_user, only: [:new, :create, :edit, :destroy]
   before_action :correct_user,   only: :destroy
 
   def new
@@ -15,6 +15,20 @@ class PostsController < ApplicationController
     else
       @feed_items = current_user.feed.paginate(page: params[:page])
       render 'new', status: :unprocessable_entity
+    end
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      flash[:success] = "編集されました"
+      redirect_to current_user
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 

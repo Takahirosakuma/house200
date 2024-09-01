@@ -1,0 +1,11 @@
+<%= form_with(model: @post) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_field :title, placeholder: "タイトルを書いてください..." %>
+    <%= f.text_area :content, placeholder: "本文を書いてください..." %>
+  </div>
+  <%= f.submit "編集", class: "btn btn-primary" %>
+  <span class="image">
+    <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %>
+  </span>
+<% end %>
