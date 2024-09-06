@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   post "/login",     to: "sessions#create"
   delete "/logout",  to: "sessions#destroy"
   resources :users
-  resources :posts, only: [:new, :create, :edit, :update,  :destroy]
+  resources :posts, only: [:show, :new, :create, :edit, :update,  :destroy]
   get  "/posts",     to: "static_pages#home"
 end
