@@ -1,0 +1,24 @@
+<div class="posts">
+
+  <% @posts.each do |post| %>
+    <li id="post-<%= post.id %>">
+      <span class="user"><%= link_to post.user.name, post.user %></span>
+      <span class="title"><%= post.title %></span>
+      <span class="content">
+        <%= post.content %>
+        <%= image_tag post.image.variant(:display) if post.image.attached? %>
+      </span>
+      <span class="timestamp">
+        Posted <%= time_ago_in_words(post.created_at) %> ago.
+        <% if current_user?(post.user) %>
+          <%= link_to "編集", edit_post_path(post) %>
+          <%= link_to "削除", post, data: { "turbo-method": :delete,
+                                                  turbo_confirm: "削除しますか?" } %>
+        <% end %>
+      </span>
+    </li>
+  <% end %>
+
+  <%= will_paginate %>
+
+</div>
