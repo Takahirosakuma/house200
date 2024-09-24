@@ -5,6 +5,7 @@
     <h4>本文</h4>
     <p><%= @post.content %></p>
     <%= image_tag @post.image.variant(:display) if @post.image.attached? %>
+    <p><%= render "favorites/btn", post: @post %><p>
     <span class="timestamp">
       Posted <%= time_ago_in_words(@post.created_at) %> ago.
       <% if current_user?(@post.user) %>
@@ -13,5 +14,18 @@
                                                 turbo_confirm: "削除しますか?" } %>
       <% end %>
     </span>
+    <% if @post.favorited_by?(current_user) %>
+      <p>
+        <%= button_to post_favorites_path(@post), method: :delete do %>
+          ♥<%= @post.favorites.count %> 
+        <% end %>
+      </p>
+    <% else %>
+      <p>
+        <%= button_to post_favorites_path(@post), method: :post do %>
+          ♡<%= @post.favorites.count %> 
+        <% end %>
+      </p>
+    <% end %>
   </li>
 <div>

@@ -1,24 +1,49 @@
-<div class="posts">
+<% provide(:title, "インデックス") %>
+<div>
+  <h1>騒音問題に悩んでいる方
+  マンションやアパートの音環境を共有しましょう</h1>
+</div>
 
-  <% @posts.each do |post| %>
-    <li id="post-<%= post.id %>">
-      <span class="user"><%= link_to post.user.name, post.user %></span>
-      <span class="title"><%= post.title %></span>
-      <span class="content">
-        <%= post.content %>
-        <%= image_tag post.image.variant(:display) if post.image.attached? %>
-      </span>
-      <span class="timestamp">
-        Posted <%= time_ago_in_words(post.created_at) %> ago.
-        <% if current_user?(post.user) %>
-          <%= link_to "編集", edit_post_path(post) %>
-          <%= link_to "削除", post, data: { "turbo-method": :delete,
-                                                  turbo_confirm: "削除しますか?" } %>
-        <% end %>
-      </span>
-    </li>
-  <% end %>
+<div class="col-md-8">
+  <h3>投稿一覧</h3>
 
-  <%= will_paginate %>
+  <div class="posts">
+
+    <% @posts.each do |post| %>
+        <span class="user"><%= link_to post.user.name, post.user %></span>
+        <span class="title"><%= post.title %></span>
+        <span class="content">
+          <%= post.content %>
+          <%= image_tag post.image.variant(:display) if post.image.attached? %>
+        </span>
+        <td class="wrap">
+          <% if current_user.already_favorited?(post) %>
+            <%= button_to post_favorites_path(post), method: :delete, class: 'custom-class', form: { class: 'form-custom-class' } do %>
+              <span style="color:red;"><i class="fa-solid fa-heart"></i></span>
+            <% end %>
+            <%= post.favorites.count %>
+          <% else %>
+            <%= button_to post_favorites_path(post), method: :post, class: 'custom-class', form: { class: 'form-custom-class' }  do %>
+              <i class="fa-regular fa-heart"></i>
+            <% end %>
+            <%= post.favorites.count %>
+          <% end %>
+          
+          
+        </td>
+        <span class="timestamp">
+          Posted <%= time_ago_in_words(post.created_at) %> ago.
+          <% if current_user?(post.user) %>
+            <%= link_to "編集", edit_post_path(post) %>
+            <%= link_to "削除", post, data: { "turbo-method": :delete,
+                                                    turbo_confirm: "削除しますか?" } %>
+          <% end %>
+        </span>
+      </li>
+    <% end %>
+
+    <%= will_paginate %>
+
+  </div>
 
 </div>
