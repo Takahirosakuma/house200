@@ -14,6 +14,8 @@
         <span class="title"><%= post.title %></span>
         <span class="content">
           <%= post.content %>
+          <%= post.prefecture %>
+          <%= post.city %>
           <%= image_tag post.image.variant(:display) if post.image.attached? %>
         </span>
         <td class="wrap">

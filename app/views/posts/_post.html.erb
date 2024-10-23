@@ -3,6 +3,10 @@
   <span class="title"><%= post.title %></span>
   <span class="content">
     <%= post.content %>
+    <br>
+    <%= post.prefecture %>
+    <br>
+    <%= post.city %>
     <%= image_tag post.image.variant(:display) if post.image.attached? %>
   </span>
 
