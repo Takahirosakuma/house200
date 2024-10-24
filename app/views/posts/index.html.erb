@@ -14,7 +14,9 @@
         <span class="title"><%= post.title %></span>
         <span class="content">
           <%= post.content %>
+          <br>
           <%= post.prefecture %>
+          <br>
           <%= post.city %>
           <%= image_tag post.image.variant(:display) if post.image.attached? %>
         </span>
@@ -44,8 +46,22 @@
       </li>
     <% end %>
 
-    <%= will_paginate %>
+ <%= will_paginate %>  
 
   </div>
-
+  <div class="col-md-6">
+    <strong>検索</strong>
+      <%= search_form_for @q ,:url=>{:controller=>"posts",:action=>"index"} do |f| %>
+        <%= f.label :"タイトル" %>
+        <%= f.search_field :title_cont %>
+        <%= f.label :"本文" %>
+        <%= f.search_field :content_cont %>
+        <%= f.label :"都道府県" %>
+        <%= f.search_field :prefecture_cont %>
+        <%= f.label :"市区町村" %>
+        <%= f.search_field :city_cont %>
+      
+      <%= f.submit "検索" %>
+    <%end%>
+  </div>
 </div>

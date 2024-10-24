@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   before_action :correct_user,   only: :destroy
 
   def index
-    @posts = Post.paginate(page: params[:page])
+    @q = Post.ransack(params[:q])
+    @posts = @q.result(distinct: true).includes(:user).paginate(page: params[:page])
   end
 
 
