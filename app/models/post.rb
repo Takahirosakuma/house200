@@ -12,4 +12,12 @@ class Post < ApplicationRecord
                                       message: "must be a valid image format" },
                       size:         { less_than: 5.megabytes,
                                       message:   "should be less than 5MB" }
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["title","content", "prefecture", "city"]
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    []
+  end
 end

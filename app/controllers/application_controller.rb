@@ -1,6 +1,14 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
 
+  before_action :set_search
+
+  def set_search
+    @q = Post.ransack(params[:q])
+    @posts = @q.result(distinct: true).order(created_at: :desc).paginate(page: params[:page])
+  end
+
+
   private
 
   # ユーザーのログインを確認する
