@@ -134,16 +134,29 @@ input {
     border-top: 1px solid #e8e8e8;
   }
   .user {
-    margin-top: 5em;
+    margin-top: 10px;
     padding-top: 0;
+  }
+  .title {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-bottom: 3px;
   }
   .content {
     display: block;
+    border-top: 1px solid rgb(137, 170, 255);
+    margin-top: 8px;
     margin-left: 60px;
+    padding-top: 8px;
     img {
       display: block;
       padding: 5px 0;
     }
+  }
+  .wrap {
+    display: block;
+    margin-left: 60px;
   }
   .timestamp {
     color: $gray-light;

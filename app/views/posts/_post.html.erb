@@ -1,14 +1,14 @@
 <li id="post-<%= post.id %>">
-  <span class="user"><%= link_to post.user.name, post.user %></span>
-  <span class="title">物件名 ： <%= post.title %></span>
+ 
+  <div class="title">物件名 ： <%= post.title %></div>
   <span class="content">
-    詳細 ： <%= post.content %>
+    詳細 ： <%= post.content %></p>
     <br>
     <%= post.prefecture %>
     <br>
     <%= post.city %>
     <br>
-
+    投稿者：<span class="user"><%= link_to post.user.name, post.user %></span>
     <p><i class="fa-solid fa-star" style="color: #ffb10a;"></i>:<%= post.score %></p>
     
 
@@ -20,17 +20,18 @@
       <span style="color:red;"><i class="fa-solid fa-heart"></i></span>
       <%= post.favorites.count %>
     <% elsif current_user.already_favorited?(post) %>
-      <div>
+
       <%= button_to post_favorites_path(post), method: :delete, class: 'custom-class', form: { class: 'form-custom-class' } do %>
         <span style="color:red;"><i class="fa-solid fa-heart"></i></span>
+        <%= post.favorites.count %>
       <% end %>
-      <%= post.favorites.count %>
-      </div>
+
     <% else %>
       <%= button_to post_favorites_path(post), method: :post, class: 'custom-class', form: { class: 'form-custom-class' }  do %>
         <i class="fa-regular fa-heart"></i>
-      <% end %>
       <%= post.favorites.count %>
+      <% end %>
+
     <% end %>
   </span>
 
