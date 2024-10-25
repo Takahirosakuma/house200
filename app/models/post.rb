@@ -14,7 +14,7 @@ class Post < ApplicationRecord
                                       message:   "should be less than 5MB" }
 
   def self.ransackable_attributes(auth_object = nil)
-    ["title","content", "prefecture", "city"]
+    ["title","content", "prefecture", "city", "score"]
   end
 
   def self.ransackable_associations(auth_object = nil)

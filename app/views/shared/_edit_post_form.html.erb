@@ -5,6 +5,8 @@
     <%= f.text_field :title, placeholder: "タイトルを書いてください..." %>
     <%= f.label :本文, style: "display: block" %>
     <%= f.text_area :content, placeholder: "本文を書いてください..." %>
+    <p><%= f.label :評価 %><i class="fa-solid fa-star" style="color: #ffb10a;"></i></p>
+    <%= f.number_field :score, step: '0.1', placeholder: "評価を1~5までで書いてください（小数点0.1まで入力可能です）..." %>
     <%= f.label :都道府県, style: "display: block" %>
     <%= f.text_field :prefecture, placeholder: "都道府県を書いてください..." %>
     <%= f.label :市区町村, style: "display: block" %>
