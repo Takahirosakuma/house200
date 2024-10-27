@@ -17,11 +17,27 @@ textarea {
 
 .center {
   text-align: center;
+  position: center;
 }
 
-.center h1 {
+.bottom {
   margin-bottom: 10px;
 }
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.image {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
 
 /* typography */
 
@@ -46,6 +62,10 @@ h2 {
   text-align: center;
   font-weight: normal;
   color: #777;
+}
+
+.center h1 {
+  margin-bottom: 10px;
 }
 
 p {
@@ -125,13 +145,15 @@ input {
 }
 
 /* posts */
-
+.title-box {
+  display: flow-root;
+}
 .posts {
   list-style: none;
   padding: 0;
   li {
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    // border-top: 1px solid #e8e8e8;
   }
   .user {
     margin-top: 10px;
@@ -142,6 +164,7 @@ input {
     margin-top: 10px;
     margin-left: 60px;
     margin-bottom: 3px;
+    float: left;
   }
   .content {
     display: block;
@@ -173,21 +196,24 @@ input {
     background-color: transparent;
    }
 }
-
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
-  }
-}
-
-span.image {
+.score {
+  font-size: 20px;
+  float: right;
   margin-top: 10px;
-  input {
-    border: 0;
-  }
+  padding-right: 10px;
+}
+.search {
+  margin-top: 20px;
+  display: block;
 }
 
-.center {
-  position: center;
+/* search */
+
+.pref_link {
+  margin-right: 15px;
+}
+
+.area {
+  display: inline-block;
+  padding-right: 20px;
 }

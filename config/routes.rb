@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     resource :favorites, only: [:create, :destroy]
   end
   get  "/posts",     to: "static_pages#home"
-  get  "/search",     to: "posts#search"
+  get  "/search",    to: "posts#search"
+  get  "/area",      to: "posts#area"
 end

@@ -1,0 +1,75 @@
+<div class="container">
+  <h1>エリア検索</h1>
+  <div class="col-md-offset-3">
+    <div>
+      <p class="area">関東</p>
+      <%= link_to '東京都', { controller: "posts", action: "index", q: {prefecture_cont: "東京"} }, class: "pref_link" %>
+      <%= link_to '埼玉県', { controller: "posts", action: "index", q: {prefecture_cont: "埼玉"} }, class: "pref_link"  %>
+      <%= link_to '千葉県', { controller: "posts", action: "index", q: {prefecture_cont: "千葉"} }, class: "pref_link"  %>
+      <%= link_to '神奈川県', { controller: "posts", action: "index", q: {prefecture_cont: "神奈川"} }, class: "pref_link"  %>
+      <%= link_to '群馬県', { controller: "posts", action: "index", q: {prefecture_cont: "群馬"} }, class: "pref_link"  %>
+      <%= link_to '栃木県', { controller: "posts", action: "index", q: {prefecture_cont: "栃木"} }, class: "pref_link"  %>
+      <%= link_to '茨城県', { controller: "posts", action: "index", q: {prefecture_cont: "茨城"} }, class: "pref_link"  %>
+    </div>
+    <div>
+      <p class="area">北海道・東北</p>
+      <%= link_to '北海道', { controller: "posts", action: "index", q: {prefecture_cont: "北海道"} }, class: "pref_link" %>
+      <%= link_to '青森県', { controller: "posts", action: "index", q: {prefecture_cont: "青森"} }, class: "pref_link"  %>
+      <%= link_to '岩手県', { controller: "posts", action: "index", q: {prefecture_cont: "岩手"} }, class: "pref_link"  %>
+      <%= link_to '宮城県', { controller: "posts", action: "index", q: {prefecture_cont: "宮城"} }, class: "pref_link"  %>
+      <%= link_to '秋田県', { controller: "posts", action: "index", q: {prefecture_cont: "秋田"} }, class: "pref_link"  %>
+      <%= link_to '山形県', { controller: "posts", action: "index", q: {prefecture_cont: "山形"} }, class: "pref_link"  %>
+      <%= link_to '福島県', { controller: "posts", action: "index", q: {prefecture_cont: "福島"} }, class: "pref_link"  %>
+    </div>
+    <div>
+      <p class="area">中部</p>
+      <%= link_to '新潟県', { controller: "posts", action: "index", q: {prefecture_cont: "新潟"} }, class: "pref_link" %>
+      <%= link_to '富山県', { controller: "posts", action: "index", q: {prefecture_cont: "富山"} }, class: "pref_link"  %>
+      <%= link_to '石川県', { controller: "posts", action: "index", q: {prefecture_cont: "石川"} }, class: "pref_link"  %>
+      <%= link_to '福井県', { controller: "posts", action: "index", q: {prefecture_cont: "福井"} }, class: "pref_link"  %>
+      <%= link_to '山梨県', { controller: "posts", action: "index", q: {prefecture_cont: "山梨"} }, class: "pref_link"  %>
+      <%= link_to '長野県', { controller: "posts", action: "index", q: {prefecture_cont: "長野"} }, class: "pref_link"  %>
+      <%= link_to '岐阜県', { controller: "posts", action: "index", q: {prefecture_cont: "岐阜"} }, class: "pref_link"  %>
+      <%= link_to '静岡県', { controller: "posts", action: "index", q: {prefecture_cont: "静岡"} }, class: "pref_link"  %>
+      <%= link_to '愛知県', { controller: "posts", action: "index", q: {prefecture_cont: "愛知"} }, class: "pref_link"  %>
+    </div>
+    <div>
+      <p class="area">関西</p>
+      <%= link_to '大阪府', { controller: "posts", action: "index", q: {prefecture_cont: "大阪"} }, class: "pref_link" %>
+      <%= link_to '京都府', { controller: "posts", action: "index", q: {prefecture_cont: "京都"} }, class: "pref_link"  %>
+      <%= link_to '兵庫県', { controller: "posts", action: "index", q: {prefecture_cont: "兵庫"} }, class: "pref_link"  %>
+      <%= link_to '滋賀県', { controller: "posts", action: "index", q: {prefecture_cont: "滋賀"} }, class: "pref_link"  %>
+      <%= link_to '三重県', { controller: "posts", action: "index", q: {prefecture_cont: "三重"} }, class: "pref_link"  %>
+      <%= link_to '奈良県', { controller: "posts", action: "index", q: {prefecture_cont: "奈良"} }, class: "pref_link"  %>
+      <%= link_to '和歌山県', { controller: "posts", action: "index", q: {prefecture_cont: "和歌山"} }, class: "pref_link"  %>
+    </div>
+    <div>
+      <p class="area">中国・四国</p>
+      <%= link_to '鳥取県', { controller: "posts", action: "index", q: {prefecture_cont: "鳥取"} }, class: "pref_link" %>
+      <%= link_to '島根県', { controller: "posts", action: "index", q: {prefecture_cont: "島根"} }, class: "pref_link"  %>
+      <%= link_to '岡山県', { controller: "posts", action: "index", q: {prefecture_cont: "岡山"} }, class: "pref_link"  %>
+      <%= link_to '広島県', { controller: "posts", action: "index", q: {prefecture_cont: "広島"} }, class: "pref_link"  %>
+      <%= link_to '山口県', { controller: "posts", action: "index", q: {prefecture_cont: "山口"} }, class: "pref_link"  %>
+      <%= link_to '徳島県', { controller: "posts", action: "index", q: {prefecture_cont: "徳島"} }, class: "pref_link"  %>
+      <%= link_to '香川県', { controller: "posts", action: "index", q: {prefecture_cont: "香川"} }, class: "pref_link"  %>
+      <%= link_to '愛媛県', { controller: "posts", action: "index", q: {prefecture_cont: "愛媛"} }, class: "pref_link"  %>
+      <%= link_to '高知県', { controller: "posts", action: "index", q: {prefecture_cont: "高知"} }, class: "pref_link"  %>
+    </div>
+    <div>
+      <p class="area">九州・沖縄</p>
+      <%= link_to '福岡県', { controller: "posts", action: "index", q: {prefecture_cont: "福岡"} }, class: "pref_link" %>
+      <%= link_to '佐賀県', { controller: "posts", action: "index", q: {prefecture_cont: "佐賀"} }, class: "pref_link"  %>
+      <%= link_to '長崎県', { controller: "posts", action: "index", q: {prefecture_cont: "長崎"} }, class: "pref_link"  %>
+      <%= link_to '熊本県', { controller: "posts", action: "index", q: {prefecture_cont: "熊本"} }, class: "pref_link"  %>
+      <%= link_to '大分県', { controller: "posts", action: "index", q: {prefecture_cont: "大分"} }, class: "pref_link"  %>
+      <%= link_to '宮崎県', { controller: "posts", action: "index", q: {prefecture_cont: "宮崎"} }, class: "pref_link"  %>
+      <%= link_to '鹿児島県', { controller: "posts", action: "index", q: {prefecture_cont: "鹿児島"} }, class: "pref_link"  %>
+      <%= link_to '沖縄県', { controller: "posts", action: "index", q: {prefecture_cont: "沖縄"} }, class: "pref_link"  %>
+    </div>
+    <div>
+      <p  class="area">市区町村</p>
+      <%= link_to '渋谷区', { controller: "posts", action: "index", q: {city_cont: "渋谷"} }, class: "pref_link" %>
+      <%= link_to '新宿区', { controller: "posts", action: "index", q: {city_cont: "新宿"} }, class: "pref_link" %>
+    </div>
+  </div>
+</div>

@@ -1,16 +1,16 @@
 <li id="post-<%= post.id %>">
  
-  <div class="title">物件名 ： <%= post.title %></div>
+  <div class="title-box">
+    <div class="title">物件名 ： <%= post.title %></div>
+    <div class="score"><i class="fa-solid fa-star" style="color: #ffb10a;"></i> : <%= post.score %></div>
+  </div>
   <span class="content">
-    詳細 ： <%= post.content %></p>
-    <br>
+    <p>詳細 ： <%= post.content %></p>
     <%= post.prefecture %>
     <br>
     <%= post.city %>
     <br>
     投稿者：<span class="user"><%= link_to post.user.name, post.user %></span>
-    <p><i class="fa-solid fa-star" style="color: #ffb10a;"></i>:<%= post.score %></p>
-    
 
     <%= image_tag post.image.variant(:display) if post.image.attached? %>
   </span>
@@ -30,12 +30,12 @@
       <%= button_to post_favorites_path(post), method: :post, class: 'custom-class', form: { class: 'form-custom-class' }  do %>
         <i class="fa-regular fa-heart"></i>
       <%= post.favorites.count %>
-      <% end %>
+    <% end %>
 
     <% end %>
   </span>
 
-  <span class="timestamp">
+  <span class="timestamp bottom">
     Posted <%= time_ago_in_words(post.created_at) %> ago.
     <% if current_user?(post.user) %>
       <%= link_to "編集", edit_post_path(post) %>
