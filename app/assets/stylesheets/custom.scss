@@ -52,7 +52,8 @@ h1 {
   text-align: center;
   color: #ffffff;
   background-color: #67b6ff;
-  padding: 20px;
+  padding: 20px calc(50vw - 50% + 10px);/* POINT! */
+  margin-inline: calc(50% - 55vw);/* POINT! */
 }
 
 h2 {
@@ -72,6 +73,10 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+.main-title {
+  font-size: clamp(24px, 2.5vw, 45px);
+}
+
 
 /* header */
 
@@ -139,9 +144,25 @@ input {
   display: block;
 }
 
+.icon-bar {
+  color: #fff;
+  background-color: #fff;
+}
+
 .navbar-toggle {
-  background-color: #7f7f7f;
-  border-color: #000000;
+  background-color: #d4d4d4;
+  border-color: #ffffff;
+}
+
+/*  home  */
+.explanation {
+  font-size: 21px;
+  line-height: 1.5;
+  font-weight: normal;
+  width: 100%;
+  padding-left: 50px;
+  padding-bottom: 30px;
+  border-bottom:1px solid #bfd2d3;
 }
 
 /* posts */
