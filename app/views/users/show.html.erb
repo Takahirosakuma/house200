@@ -1,25 +1,28 @@
 <h1>アカウント情報</h1>
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <p>ニックネーム</p>
-      <%= @user.name %>
-      <p>メールアドレス</p>
-      <%= @user.email %>
-      <p>パスワード</p>
-      <p>********</p>
-    </div>
-
-  <div>
-    <%= link_to "アカウント編集", edit_user_path(current_user) %><hr>
-    <%= link_to "アカウント削除", @user, data: { "turbo-method": :delete, turbo_confirm: "本当に削除しますか？" } %>
-  </div>
-  <div class="col-md-8">
-    <% if @user.posts.any? %>
-      <h3>投稿 (<%= @user.posts.count %>)</h3>
-      <ol class="posts">
-        <%= render @posts %>
-      </ol>
-      <%= will_paginate @posts %>
+    <% if current_user == @user %>
+      <div class="col-md-6 col-md-offset-3">
+        <p>ニックネーム</p>
+        <%= @user.name %>
+        <p>メールアドレス</p>
+        <%= @user.email %>
+        <p>パスワード</p>
+        <p>********</p>
+      </div>
+       <div>
+        <%= link_to "アカウント編集", edit_user_path(current_user) %><hr>
+        <%= link_to "アカウント削除", @user, data: { "turbo-method": :delete, turbo_confirm: "本当に削除しますか？" } %>
+      </div>
     <% end %>
-  </div>
+    
+   
+    <div class="col-md-8">
+      <% if @user.posts.any? %>
+        <h3>投稿 (<%= @user.posts.count %>)</h3>
+        <ol class="posts">
+          <%= render @posts %>
+        </ol>
+        <%= will_paginate @posts %>
+      <% end %>
+    </div>
 </div>
