@@ -146,6 +146,7 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.7.2)
+    kgio (2.11.4)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -245,6 +246,7 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rainbow (3.1.1)
+    raindrops (0.20.1)
     rake (13.2.1)
     ransack (4.2.1)
       activerecord (>= 6.1.5)
@@ -336,6 +338,9 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.5.0)
+    unicorn (6.1.0)
+      kgio (~> 2.6)
+      raindrops (~> 0.7)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -389,6 +394,7 @@ DEPENDENCIES
   sqlite3 (= 1.6.1)
   stimulus-rails (= 1.2.1)
   turbo-rails (= 1.4.0)
+  unicorn
   web-console (= 4.2.0)
   webdrivers (= 5.2.0)
   will_paginate (= 3.3.1)
