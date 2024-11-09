@@ -18,7 +18,6 @@ gem "stimulus-rails",  "1.2.1"
 gem "jbuilder",        "2.11.5"
 gem "puma",            "5.6.8"
 gem "bootsnap",        "1.16.0", require: false
-gem "sqlite3",         "1.6.1"
 gem 'mysql2'
 gem 'ransack'
 gem 'unicorn'
