@@ -256,3 +256,19 @@ input {
 .search_result {
   margin-top: 30px;
 }
+
+/*  responsive  */
+
+@media screen and (min-width: 1068px) {
+  .search-extend-btn {
+    display: flex;
+  }
+  .btn-default.btn-gray.search-btn {
+    width: 42%;
+    margin-right: 25px;
+    outline: 0;
+  }
+  .btn-default.btn-red.search-btn {
+    width: 42%;
+  }
+}
