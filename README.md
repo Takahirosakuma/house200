@@ -1,6 +1,9 @@
 # 静かな家に住もう
 
-(./shizukanaie.top.png)
+<img width="800" alt="shizukanaie top" src="https://github.com/user-attachments/assets/b7c315f3-f511-40bb-8f1b-afea74602540">
+
+
+
 
 * 住居の音環境について投稿をしたり閲覧するサイトです。
 * 音環境に特化した投稿のみを扱います。 
