@@ -83,7 +83,7 @@ http://shizukanaie.jp/
 | EC2     　　　　　　   |　Amazon Linux 2     |
 | Git/Github          |         |
 
-## 実装した機能
+### 実装した機能
 
 * アカウント登録
 * アカウント編集
@@ -95,3 +95,9 @@ http://shizukanaie.jp/
 * 投稿検索
 * 投稿エリア検索
 * いいね機能
+
+### 画面遷移図
+[画面遷移図はこちら](https://www.figma.com/design/YdRtNdSPTFUz8KRSzaXmqN/%E9%9D%99%E3%81%8B%E3%81%AA%E5%AE%B6%E3%81%AB%E4%BD%8F%E3%82%82%E3%81%86%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?node-id=0-1&t=cljG8HVJ8GsTwhBi-1)
+
+### テーブル設計
+<img width="564" alt="draw io" src="https://github.com/user-attachments/assets/4c83a1b9-d5cc-49c4-87eb-1e843eabd48c">
