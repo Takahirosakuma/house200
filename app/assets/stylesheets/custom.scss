@@ -84,6 +84,7 @@ p {
   background-color: #fff;
 }
 
+
 #logo {
   float: left;
   margin-right: 10px;
@@ -168,6 +169,33 @@ input {
   padding-bottom: 30px;
   border-bottom:1px solid #bfd2d3;
 }
+
+/*  usage  */
+.usage-explanation {
+  line-height: 2;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.topspace {
+  padding-top: 40px;
+}
+
+.mt40 {
+  margin-top: 40px;
+}
+
+.mb20 {
+  margin-bottom: 80px;
+}
+
+.picture-explanation {
+  font-size: 0.8em;
+  font-weight: thin;
+  color: #7a7a7a;
+  line-height: 1.5;
+}
+
 
 /* posts */
 .title-box {
@@ -315,5 +343,19 @@ input {
 
   .user_name {
     margin-top: 0;
+  }
+}
+
+/* responsive */
+
+@media screen and (min-width: 768px) {
+  li {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  li {
+    font-size: 15px;
   }
 }
